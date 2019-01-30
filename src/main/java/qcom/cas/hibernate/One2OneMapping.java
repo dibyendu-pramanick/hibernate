@@ -22,18 +22,22 @@ public class One2OneMapping
 	    Session session = factory.openSession();
 	    
 	    Student s = new Student();
-	    //s.setId(101);
+	    s.setId(101);
 	    
 	    s.setGroup("test");
 	    s.setName("Dibyendu");
 	    
+	    
 	    Address address = new Address();
-	    address.setId(1);
+	    //address.setId(1);
 	    address.setPlace("Bangalore");
-	    s.setId(address.getId());
+	    //s.setId(address.getId());
 	    address.setStudent(s);
+	    //s.setAddress(address);
 	    
 	    Transaction  tx = session.beginTransaction();
+	    //one to one mapping with common primary key
+	    session.save(s);
 	    session.save(address);
 	    tx.commit();
 		session.close();

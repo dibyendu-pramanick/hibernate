@@ -19,5 +19,9 @@
 <mapping></mapping> -->
 <mapping class="qcom.cas.hibernate.pojo.Student"/>
 <mapping class="qcom.cas.hibernate.pojo.Address"/>
+<mapping class="qcom.cas.hibernate.pojo.Employee"/>
+<mapping class="qcom.cas.hibernate.pojo.Account"/>
+<mapping class="qcom.cas.hibernate.pojo.Reader"/>
+<mapping class="qcom.cas.hibernate.pojo.Subscription"/>
 </session-factory>
 </hibernate-configuration>

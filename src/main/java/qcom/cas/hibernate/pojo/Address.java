@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -32,8 +33,11 @@ public class Address {
 	inverseJoinColumns = @JoinColumn(name="STU_ID"))
 	private Student student;*/
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
+	
+	//one to one mapping with common primary key
+	@OneToOne
+    @JoinColumn(name = "id")
+    @MapsId
 	private Student student;
 	
 	

@@ -21,6 +21,10 @@ public class Student {
 	@Column(name="grp")
 	private String group;
 	
+	//one to one mapping with common primary key
+	@OneToOne(mappedBy = "student")
+	private Address address;
+	
 	
 	
 	public int getId() {
@@ -40,6 +44,13 @@ public class Student {
 	}
 	public void setGroup(String group) {
 		this.group = group;
+	}
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 	
